@@ -1,0 +1,19 @@
+{
+    "batch_size": 64,
+    "epochs": 1,
+    "mp_steps": 16,
+    "layers": 2,
+    "hidden": 64,
+    "eval_freq": 1,
+    "lr": 0.001,
+    "noise": 0.0,
+    "seed": 1,
+    "ratio": 1.0,
+    "shared_mp": true,
+    "dataset_dir": "data/PlasticCollision",
+    "run_name": "MPI_PlasticCollision",
+    "model": "meshgraph",
+    "plots_flag": true,
+    "plot_worst": false,
+    "project": "LowerBoundMGN"
+}

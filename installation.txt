@@ -1,0 +1,13 @@
+# Crear entorno limpio y activarlo
+conda create -n gnn python=3.11 -y
+conda activate gnn
+
+# Instalar PyTorch 2.0.1 con CUDA 11.8
+pip install torch==2.0.1+cu118 --index-url https://download.pytorch.org/whl/cu118
+
+# Instalar las dependencias compiladas para PyG en torch 2.0.1 + cu118
+pip install pyg-lib torch-scatter torch-sparse torch-cluster torch-spline-conv \
+  -f https://data.pyg.org/whl/torch-2.0.1+cu118.html
+
+# Finalmente instala torch-geometric and the rest of dependecies
+pip install torch-geometric matplotlib==3.8.3 numpy==1.26.4 wandb
