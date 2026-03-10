@@ -2,7 +2,7 @@
 
 This repository contains the official implementation of the experiments from the paper On the under-reaching phenomenon in message passing
 neural PDE solvers: revisiting the CFL condition 
-(Tesan L. and Iparraguirre MM. 2025 et al.,) 
+(Tesan L. and Iparraguirre MM. 2025 et al.) 
 [https://arxiv.org/pdf/2507.08861v1]
 
 
