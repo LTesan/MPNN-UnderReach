@@ -1,5 +1,5 @@
 # Physics-guided Message Passing Iterations
-[![DOI](https://img.shields.io/badge/DOI-Zenodo-0969da)](https://doi.org/10.5281/zenodo.18941082)
+[![DOI](https://img.shields.io/badge/DOI-Zenodo-0969da)](https://doi.org/10.5281/zenodo.18954398)
 
 
 This repository contains the official implementation of the experiments from the paper On the under-reaching phenomenon in message passing
