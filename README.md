@@ -1,11 +1,10 @@
 # Physics-guided Message Passing Iterations
 [![DOI](https://img.shields.io/badge/DOI-Zenodo-0969da)](https://doi.org/10.5281/zenodo.18954398)
-
+[📄 Paper](https://doi.org/10.1016/j.cma.2025.118476)
 
 This repository contains the official implementation of the experiments from the paper On the under-reaching phenomenon in message passing
 neural PDE solvers: revisiting the CFL condition 
 (Tesan L. and Iparraguirre MM. 2025 et al.) 
-[https://arxiv.org/pdf/2507.08861v1]
 
 
 ###  The Physics-Guided Lower-Bound (LB)
