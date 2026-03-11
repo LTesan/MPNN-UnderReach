@@ -1,6 +1,6 @@
 # Physics-guided Message Passing Iterations
 [![DOI](https://img.shields.io/badge/DOI-Zenodo-0969da)](https://doi.org/10.5281/zenodo.18954398)
-[Paper](https://doi.org/10.1016/j.cma.2025.118476)
+[![Paper](https://img.shields.io/badge/📄-Journal%20Paper-2ea44f)](https://doi.org/10.1016/j.cma.2025.118476)
 
 This repository contains the official implementation of the experiments from the paper On the under-reaching phenomenon in message passing
 neural PDE solvers: revisiting the CFL condition 
