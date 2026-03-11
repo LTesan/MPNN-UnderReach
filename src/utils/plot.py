@@ -47,6 +47,8 @@ def plot_3D_scatter(z_net, z_gt, X, Y, save_dir='outputs/gifs/', name='Liver_act
     print(f"Data saved for MATLAB at {mat_file_path}")
 
     # Plot initialization
+    X = np.asarray(X).flatten()
+    Y = np.asarray(Y).flatten()
     fig = plt.figure(figsize=(14, 8))
     ax1 = fig.add_subplot(1, 2, 1, projection='3d')
     ax2 = fig.add_subplot(1, 2, 2, projection='3d')
