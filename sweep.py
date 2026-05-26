@@ -1,7 +1,7 @@
 import torch
 import pytorch_lightning as pl
 from pytorch_lightning.loggers import WandbLogger
-from pytorch_lightning.callbacks import LearningRateMonitor
+from pytorch_lightning.callbacks import LearningRateMonitor, EarlyStopping
 
 from src.model.model import SimulatorGNN
 from src.model.model_meshgraph import SimulatorMeshGraph 
@@ -13,7 +13,7 @@ import wandb
 
 torch.set_float32_matmul_precision('medium')
 device = "cuda" if torch.cuda.is_available() else "cpu"
-dataset_dir = 'data/PlasticCollision'
+dataset_dir = 'tester-data/PlasticWave/dataset'
 
 
 def train(config=None):
@@ -51,12 +51,13 @@ def train(config=None):
     model_save_custom = ModelSaveTopK(dirpath=str(chck_path / 'models'), monitor=monitor, mode='min', topk=3)
 
     lr_monitor = LearningRateMonitor(logging_interval='epoch')
+    early_stop = EarlyStopping(monitor=monitor, mode='min', patience=50)
 
     # Trainer
     trainer = pl.Trainer(accelerator="gpu" if torch.cuda.is_available() else "cpu",
                             max_epochs=args.epochs,
                             logger=wandb_logger,
-                            callbacks=[lr_monitor, model_save_custom],
+                            callbacks=[lr_monitor, model_save_custom, early_stop],
                             num_sanity_val_steps=0,
                             deterministic=True,
                             check_val_every_n_epoch=args.eval_freq,

@@ -7,25 +7,25 @@ metric:
   name: valid_n_step_rollout_rmse  #valid_n_step_rollout_pos_rmse 
 parameters:
   model:
-    values: ['gnn']
+    values: ['meshgraph']  # Models to test
   seed:
-    values: [42]
+    values: [1]
   mp_steps:
-    values: [1, 2, 4, 8, 10, 12, 14, 16, 20, 24]  # Number of hidden layers to test  [3, 6, 8, 10, 12, 16, 24]
+    values: [1, 2, 4, 8, 12, 14, 24, 32]  # Number of hidden layers to test  [3, 6, 8, 10, 12, 16, 24]
   layers:
     values: [2]  # Number of hidden layers to test
   hidden:
-    values: [128]  # Hidden dimensions to test
+    values: [256]  # Hidden dimensions to test
   ratio:
     values: [1.]  # Noise levels to test
   noise:
-    values: [0.01]  # Noise levels to test
+    values: [0.0]  # Noise levels to test
   batch_size:
-    values: [8]  # Batch sizes to test
+    values: [2]  # Batch sizes to test
   lr:
     values: [0.001]  # Learning rates to test
   epochs:
-    values: [250]  # Epochs to test
+    values: [1000]  # Epochs to test
   input_size:
     value: 1
   output_size:
@@ -33,7 +33,7 @@ parameters:
   shared_mp:
     values: [True]
   plots_flag:
-    values: [True]
+    values: [False]
   plot_worst:
     values: [False]
   eval_freq:
