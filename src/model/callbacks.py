@@ -74,7 +74,10 @@ class ModelSaveTopK(pl.Callback):
                         old_filepath = os.path.join(self.dirpath, filename)
                         new_filepath = os.path.join(self.dirpath, f'topk{k+1}_epoch{element_k["epoch"]}.pth')
                         # Rename the file
-                        os.rename(old_filepath, new_filepath)
+                        try:
+                            os.rename(old_filepath, new_filepath)
+                        except:
+                            print(f"Error renaming {old_filepath} to {new_filepath}")
                         if self.wandb_on:
                             # Copy the file to the destination folder
                             top_k_name = os.path.join(self.dirpath, f'topk{k + 1}.pth')
